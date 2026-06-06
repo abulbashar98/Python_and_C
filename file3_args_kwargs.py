@@ -1,5 +1,5 @@
 # *args allow you to pass multiple non-key arguments
-# *kwargs allow you to pass multiple keyword arguments
+# **kwargs allow you to pass multiple keyword arguments
 
 # 1.positional 2.default 3.keyword 4. ARBITRARY
 
@@ -38,7 +38,7 @@
 
 # 3️⃣
  
-def shipping_labe(*args, **kwargs):
+def shipping_label(*args, **kwargs):
    for arg in args:
         print(arg, end=" ")
    print()
@@ -54,7 +54,7 @@ def shipping_labe(*args, **kwargs):
 
 
 
-shipping_labe("Mr","Spongebob","Squarepants","III",       street="123fakestreet",
+shipping_label("Mr","Spongebob","Squarepants","III",       street="123fakestreet",
 apt="6A1",              
 poBox="#10001",              
 city="Detroit",
