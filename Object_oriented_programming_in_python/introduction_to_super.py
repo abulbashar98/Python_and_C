@@ -13,7 +13,7 @@ class Shape:
         self.filled = filled
 
     def describe(self):
-         print(f"The color is {self.color} is filled: {self.filled}")
+        print(f"The color is {self.color} is filled: {self.filled}")
 
 
 class Circle(Shape):
@@ -24,8 +24,8 @@ class Circle(Shape):
         # here we are overriding super() describe method with own child describe method
         def describe(self):
          # or we can extend our functionality using child describe method + super() describe method 
-             print(f"This is a circle and the area of this circle is: {self.radius**2 * 3.14159}")
-             super().describe()
+            print(f"This is a circle and the area of this circle is: {self.radius**2 * 3.14159}")
+            super().describe()
         
 
 
@@ -48,9 +48,9 @@ class Triangle(Shape):
     
     # here we are overriding super() describe method with own child describe method
     def describe(self):
-         # or we can extend our functionality using child describe method + super() describe method 
-         print(f"This is a triangle and the area of this triangle is: {self.height * self.width * 0.5}")
-         super().describe()
+        # or we can extend our functionality using child describe method + super() describe method 
+        print(f"This is a triangle and the area of this triangle is: {self.height * self.width * 0.5}")
+        super().describe()
 
 circle = Circle("red",True,5)
 square = Square("blue",False,6)
@@ -61,7 +61,7 @@ print(circle.filled)
 print(circle.radius)
 
 
-# we are now overriding the super() describe method 
+
 circle.describe()
 square.describe()
 triangle.describe()
