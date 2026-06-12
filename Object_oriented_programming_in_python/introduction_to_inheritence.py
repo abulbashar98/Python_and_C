@@ -5,6 +5,7 @@
 class Animal:
     def __init__(self,name):
         self.name = name
+        self.isAlive = True
 
     def eat(self):
         print(f"{self.name} is eating")
@@ -32,8 +33,11 @@ mouse = Mouse("Mickey")
 
 
 print(dog.name)
+print(dog.isAlive)
 print(cat.name)
+print(cat.isAlive)
 print(mouse.name)
+print(mouse.isAlive)
 
 
 # inherits eat and sleep method from parent class animal
