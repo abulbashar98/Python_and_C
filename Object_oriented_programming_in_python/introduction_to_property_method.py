@@ -59,13 +59,13 @@ rectangle1 = Rectangle(4,5)
 rectangle1.height = 6
 rectangle1.width = 2
 
-# print(rectangle1.width)
+print(rectangle1.width)
 print(rectangle1.height)
 # terminal: 2 cm 6cm
 
 
-# del rectangle1.width
-# del rectangle1.height
+del rectangle1.width
+del rectangle1.height
 
-# print(rectangle1.height)
+print(rectangle1.height)
 # terminal: AttributeError: 'Rectangle' object has no attribute '_height'. Did you mean: 'height'?
