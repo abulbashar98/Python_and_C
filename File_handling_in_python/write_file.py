@@ -1,15 +1,15 @@
 # Write python file (.txt, .json, .csv)
 
 
-txt_data = "This a file was written with python"
+txt_data = "This file was written with python"
 file_path_relative = "output.txt"
+file_path_absolute = "C:/Users/abulb/OneDrive/Desktop/output.txt"
 
 # If a file does not exist then "w" mode creates a file or if it does exist with the same name and different data then "w" mode overwrites the file
 
-# with open(file = file_path_relative, mode="w") as file:
-    # open() returns an object much like file = File()
-    # file.write(txt_data)
-    # print(f"File {file_path_relative} was created")
+with open(file = file_path_absolute, mode = "w") as file:
+    file.write(txt_data)
+    print(f"File {file_path_absolute} was created")
 
 
 
@@ -68,6 +68,7 @@ except FileExistsError:
 import json
 
 file_path_relative_json = "output.json"
+file_path_absolute_json = "C:/Users/abulb/OneDrive/Desktop/input.json"
 
 employee = {
     "name" : "spongebob",
@@ -76,12 +77,12 @@ employee = {
 }
 
 try:
-    with open(file = file_path_relative_json, mode = "x") as file:
+    with open(file = file_path_absolute_json, mode = "x") as file:
         json.dump(employee, file)
-        print(f"Json file {file_path_relative_json} was created")
+        print(f"Json file {file_path_absolute_json} was created")
 
 except FileExistsError:
-    print(f"File {file_path_relative_json} already exists")    
+    print(f"File {file_path_absolute_json} already exists")    
 
 
 
@@ -91,6 +92,7 @@ except FileExistsError:
 import csv
 
 file_path_relative_csv = "output.csv"
+file_path_absolute_csv = "C:\\Users\\abulb\OneDrive\\Desktop/input.csv"
 
 employee = [["Name", "Age", "Job"],
              ["spongebob", 30, "cook"],
@@ -98,14 +100,14 @@ employee = [["Name", "Age", "Job"],
              ["sandy", 25, "scientist"]]
 
 try:
-    with open(file = file_path_relative_csv, mode = "x", newline = "") as file:
+    with open(file = file_path_absolute_csv, mode = "x", newline = "") as file:
         writer = csv.writer(file)
         for row in employee:
             writer.writerow(row)
         
-        print(f"CSV file {file_path_relative_csv} was created")
+        print(f"CSV file {file_path_absolute_csv} was created")
 
 except FileExistsError:
-    print(f"File {file_path_relative_csv} already exists")
+    print(f"File {file_path_absolute_csv} already exists")
 
 
