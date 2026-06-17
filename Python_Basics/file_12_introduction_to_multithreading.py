@@ -1,3 +1,8 @@
+# multithreading = used to perform multiple tasks concurrently(multitasking)
+# Good for I/O (input/output) bound tasks like reading files or fetching data from api.
+# thread = Thread(target= my_target_function)
+
+
 import threading
 import time
 
