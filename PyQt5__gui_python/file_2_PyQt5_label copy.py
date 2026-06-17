@@ -1,8 +1,10 @@
 # PyQt5 QLabels
+# PyQt5 Qt alignments
 
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 from PyQt5.QtGui import QIcon, QFont
+from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -17,6 +19,19 @@ class MainWindow(QMainWindow):
                              "background-color: cyan;"
                              "font-weight: bold;"
                              "text-decoration: underline")
+        
+        # label.setAlignment(Qt.AlignTop) # vertically top
+        # label.setAlignment(Qt.AlignBottom)  # vertically bottom
+        # label.setAlignment(Qt.AlignVCenter) # vertically center
+        # label.setAlignment(Qt.AlignRight) # Horizontally right
+        # label.setAlignment(Qt.AlignLeft) # Horizontally left
+        # label.setAlignment(Qt.AlignHCenter) # Horizontally center
+
+        # label.setAlignment(Qt.AlignVCenter | Qt.AlignHCenter) # Vertically center and Horizontally center
+        # label.setAlignment(Qt.AlignHCenter | Qt.AlignTop) # horizontally center and vertically top
+        # label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom) # Horizontally center and vertically bottom
+        # label.setAlignment(Qt.AlignCenter) # Align vertically and Horizontally center
+
 
 
 def main():
