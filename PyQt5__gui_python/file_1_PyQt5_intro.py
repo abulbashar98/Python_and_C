@@ -10,6 +10,10 @@ class MainWindow(QMainWindow):
         self.setGeometry(500,200, 500, 400)
         self.setWindowTitle("Your first PyQt5 cool GUI")
         self.setWindowIcon(QIcon("C:\\Users\\abulb\\OneDrive\\Pictures\\Screenshots\\67.jpg"))
+        self.initUI()
+    
+    def initUI(self):
+        pass
 
 
 def main():
