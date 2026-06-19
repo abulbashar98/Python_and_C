@@ -8,7 +8,7 @@ from PyQt5.QtCore import QTime, QTimer, Qt
 class Stopwatch(QWidget):
     def __init__(self):
         super().__init__()
-        self.time_label = QLabel(self)
+        self.time_label = QLabel("00:00:00",self)
         self.start_button = QPushButton("start", self)
         self.stop_button = QPushButton("stop", self)
         self.reset_button = QPushButton("reset", self)
@@ -73,7 +73,7 @@ class Stopwatch(QWidget):
         hour = time.hour()
         minute = time.minute()
         second = time.second()
-        milSecond = time.msec()
+        milSecond = int(time.msec() / 10)
 
         return f"{hour}:{minute}:{second}.{milSecond}" 
 
@@ -176,3 +176,4 @@ if __name__ == '__main__':
 #     stopwatch = Stopwatch()
 #     stopwatch.show()
 #     sys.exit(app.exec_())
+
